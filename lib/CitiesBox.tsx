@@ -9,6 +9,9 @@ const CitiesBox = async ({ city }: { city: string }) => {
     return console.log(cities);
   };
 
+  if (cities.some((item) => item === city)) {
+    changeCities(cities);
+  }
   //cities.some((item) => item === city) ? changeCities(cities) : cities;
 
   async function getWeather(city: string) {
@@ -25,10 +28,7 @@ const CitiesBox = async ({ city }: { city: string }) => {
     };
   }
 
-  const weatherData = async (cities: string[]) => {
-    cities.some((item) => item === city) ? changeCities(cities) : cities;
-    return await Promise.all(cities.map(getWeather));
-  };
+  const weatherData = await Promise.all(cities.map(getWeather));
 
   return (
     <div className="=w-full xl:w-[30vw]">
