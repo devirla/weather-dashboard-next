@@ -9,7 +9,7 @@ const CitiesBox = async ({ city }: { city: string }) => {
     return console.log(cities);
   };
   {
-    cities.some((item) => item === city) ? changeCities(cities) : "";
+    return cities.some((item) => item === city) ? changeCities(cities) : "";
   }
   async function getWeather(city: string) {
     const res = await fetch(

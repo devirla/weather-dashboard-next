@@ -16,8 +16,8 @@ export default async function Home({
   const query = (await searchParams).query;
   let city: string = "";
 
-  {
-    query == undefined ? (city = "Warsaw") : (city = query);
+  {return(
+    query == undefined ? (city = "Warsaw") : (city = query));
   }
   console.log("Query" + city);
 
