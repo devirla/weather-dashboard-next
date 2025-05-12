@@ -16,12 +16,14 @@ export default async function Home({
   const query = (await searchParams).query;
   let city: string = "";
 
-  query == undefined ? (city = "Warsaw") : (city = query);
+  {
+    query == undefined ? (city = "Warsaw") : (city = query);
+  }
   console.log("Query" + city);
 
   const session = await auth();
 
-    return (
+  return (
     <div className="min-h-screen min-w-[360px] w-full bg-primary p-[8vw] xl:px-[15vw] xl:py-[3vh]">
       <nav className="sm:pb-[2vh] md:pb-[8vh] ">
         {session?.user ? (
