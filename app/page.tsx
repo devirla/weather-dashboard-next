@@ -7,7 +7,6 @@ import { auth } from "@/auth";
 import SignInButton from "@/lib/SignInButton";
 import SignOutButton from "@/lib/SignOutButton";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { highlightxDataType, mainDataType } from "@/types.ds";
 
 export default async function Home({
   searchParams,
@@ -22,18 +21,7 @@ export default async function Home({
 
   const session = await auth();
 
-  const dataCurrent = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=a530cc803efe4ab2a1b204603252503&q=${city}`
-  );
-  const currentWeather = await dataCurrent.json();
-
-  const dataForecast = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=a530cc803efe4ab2a1b204603252503&q=${city}&days=3`
-  );
-
-  const forecastWeather = await dataForecast.json();
-
-  return (
+    return (
     <div className="min-h-screen min-w-[360px] w-full bg-primary p-[8vw] xl:px-[15vw] xl:py-[3vh]">
       <nav className="sm:pb-[2vh] md:pb-[8vh] ">
         {session?.user ? (

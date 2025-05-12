@@ -1,4 +1,3 @@
-
 import CityItem from "./CityItem";
 
 const CitiesBox = async ({ city }: { city: string }) => {
@@ -9,9 +8,9 @@ const CitiesBox = async ({ city }: { city: string }) => {
     cities.splice(index, 1, "Rome");
     return console.log(cities);
   };
-  
+  {
     cities.some((item) => item === city) ? changeCities(cities) : "";
-  
+  }
   async function getWeather(city: string) {
     const res = await fetch(
       `http://api.weatherapi.com/v1/forecast.json?key=a530cc803efe4ab2a1b204603252503&q=${city}&days=1`
