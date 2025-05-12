@@ -1,13 +1,4 @@
-import { mainDataType } from "@/types.ds";
 import Image from "next/image";
-
-async function getDayName({ localtime }: { localtime: string }) {
-  console.log("localtime " + localtime);
-  const date = new Date(localtime);
-  const dayName = date.getDay();
-
-  return dayName;
-}
 
 async function MainBox({ city }: { city: string | undefined }) {
   const dataForecast = await fetch(

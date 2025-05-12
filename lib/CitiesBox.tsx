@@ -2,7 +2,7 @@ import Image from "next/image";
 import CityItem from "./CityItem";
 
 const CitiesBox = async ({ city }: { city: string }) => {
-  let cities = ["New York", "London", "Tokio", "Buenos Aires"];
+  const cities = ["New York", "London", "Tokio", "Buenos Aires"];
 
   const changeCities = (cities: string[]) => {
     const index = cities.indexOf(city);

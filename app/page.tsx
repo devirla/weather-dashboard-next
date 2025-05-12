@@ -14,7 +14,7 @@ export default async function Home({
 }: {
   searchParams: Promise<{ query?: string }>;
 }) {
-  let query = (await searchParams).query;
+  const query = (await searchParams).query;
   let city: string = "";
 
   query == undefined ? (city = "Warsaw") : (city = query);
