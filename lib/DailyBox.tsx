@@ -106,7 +106,7 @@ async function DailyBox({ city }: { city: string }) {
               Length of the day
             </h2>
             <div className="flex items-end sm:justify-center  gap-[15px]  ">
-              {lengthOfTheDay()}
+              {lengthOfTheDay(city)}
               {/*  <p className="text-2xl pt-[1vh]">
                 {hours}h {minutes}m
               </p> */}
