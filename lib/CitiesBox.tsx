@@ -1,4 +1,5 @@
 import CityItem from "./CityItem";
+import getCityWeather from "./getCityWeather";
 
 const CitiesBox = async ({ city }: { city: string }) => {
   const cities = ["New York", "London", "Tokio", "Buenos Aires"];
@@ -12,9 +13,8 @@ const CitiesBox = async ({ city }: { city: string }) => {
   if (cities.some((item) => item === city)) {
     changeCities(cities);
   }
-  //cities.some((item) => item === city) ? changeCities(cities) : cities;
 
-  async function getWeather(city: string) {
+  /* async function getWeather(city: string) {
     const res = await fetch(
       `http://api.weatherapi.com/v1/forecast.json?key=a530cc803efe4ab2a1b204603252503&q=${city}&days=1`
     );
@@ -26,9 +26,9 @@ const CitiesBox = async ({ city }: { city: string }) => {
       maxTemp: data.forecast.forecastday[0].day.maxtemp_c,
       icon: data.current.condition.icon,
     };
-  }
+  } */
 
-  const weatherData = await Promise.all(cities.map(getWeather));
+  const weatherData = await Promise.all(cities.map(getCityWeather));
 
   return (
     <div className="=w-full xl:w-[30vw]">

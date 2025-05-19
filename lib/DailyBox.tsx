@@ -1,12 +1,13 @@
 import {
   Carousel,
   CarouselContent,
- 
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import DailyItem from "./DailyItem";
+import get12HoursForecastWeather from "./get12HoursForecastWeather";
+import lengthOfTheDay from "./lengthOfTheDay";
 
 async function DailyBox({ city }: { city: string }) {
   const dataForecast = await fetch(
@@ -14,7 +15,7 @@ async function DailyBox({ city }: { city: string }) {
   );
   const forecastWeather = await dataForecast.json();
 
-  const get12HoursForecastWeather = async () => {
+  /* const get12HoursForecastWeather = async () => {
     const dataForecast = await fetch(
       `http://api.weatherapi.com/v1/forecast.json?key=a530cc803efe4ab2a1b204603252503&q=${city}&days=3`
     );
@@ -35,8 +36,8 @@ async function DailyBox({ city }: { city: string }) {
       );
     });
     return next12Hours;
-  };
-
+  }; */
+/* 
   const sunrise = new Date(
     forecastWeather.forecast.forecastday[0].date +
       " " +
@@ -51,7 +52,7 @@ async function DailyBox({ city }: { city: string }) {
 
   const diffMs = sunset.getTime() - sunrise.getTime();
   const hours = Math.floor(diffMs / (1000 * 60 * 60));
-  const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+  const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60)); */
 
   return (
     <div>
@@ -127,9 +128,10 @@ async function DailyBox({ city }: { city: string }) {
               Length of the day
             </h2>
             <div className="flex items-end sm:justify-center  gap-[15px]  ">
-              <p className="text-2xl pt-[1vh]">
+              {lengthOfTheDay()}
+             {/*  <p className="text-2xl pt-[1vh]">
                 {hours}h {minutes}m
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
