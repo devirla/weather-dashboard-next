@@ -37,7 +37,7 @@ async function DailyBox({ city }: { city: string }) {
     });
     return next12Hours;
   }; */
-/* 
+  /* 
   const sunrise = new Date(
     forecastWeather.forecast.forecastday[0].date +
       " " +
@@ -129,7 +129,7 @@ async function DailyBox({ city }: { city: string }) {
             </h2>
             <div className="flex items-end sm:justify-center  gap-[15px]  ">
               {lengthOfTheDay()}
-             {/*  <p className="text-2xl pt-[1vh]">
+              {/*  <p className="text-2xl pt-[1vh]">
                 {hours}h {minutes}m
               </p> */}
             </div>
