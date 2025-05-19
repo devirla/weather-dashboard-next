@@ -15,28 +15,6 @@ async function DailyBox({ city }: { city: string }) {
   );
   const forecastWeather = await dataForecast.json();
 
-  /* const get12HoursForecastWeather = async () => {
-    const dataForecast = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=a530cc803efe4ab2a1b204603252503&q=${city}&days=3`
-    );
-    const forecastWeather = await dataForecast.json();
-
-    const todayHours = forecastWeather.forecast.forecastday[0].hour;
-    const tommorowHours = forecastWeather.forecast.forecastday[1].hour;
-
-    const allHours = [...todayHours, ...tommorowHours];
-    const now = new Date(forecastWeather.location.localtime);
-    now.setMinutes(0, 0, 0);
-
-    const next12Hours = allHours.filter((hour) => {
-      const hourTime = new Date(hour.time);
-      return (
-        hourTime >= now &&
-        hourTime <= new Date(now.getTime() + 11 * 60 * 60 * 1000)
-      );
-    });
-    return next12Hours;
-  }; */
   /* 
   const sunrise = new Date(
     forecastWeather.forecast.forecastday[0].date +
@@ -64,7 +42,7 @@ async function DailyBox({ city }: { city: string }) {
               <Carousel className="w-[85%] m-auto">
                 <CarouselPrevious />
                 <CarouselContent>
-                  {(await get12HoursForecastWeather()).map((item) => (
+                  {(await get12HoursForecastWeather(city)).map((item) => (
                     <DailyItem
                       key={item.time}
                       time={item.time}
