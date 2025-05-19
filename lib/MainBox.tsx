@@ -1,3 +1,10 @@
+/*
+The main city component with basic weather information (city name, current temperature,
+minimum temperature, maximum temperature, felt temperature, status image and text).
+The main city is defined by default, but can be changed after the user logs in and
+types the city in the search bar.
+*/
+
 import Image from "next/image";
 
 async function MainBox({ city }: { city: string | undefined }) {

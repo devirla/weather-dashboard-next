@@ -1,3 +1,8 @@
+/*
+A highlight component contains data for humidity, wind status, uv index, chance of rain for 
+main city.
+*/
+
 async function HighlightBox({ city }: { city: string }) {
   const dataForecast = await fetch(
     `http://api.weatherapi.com/v1/forecast.json?key=a530cc803efe4ab2a1b204603252503&q=${city}&days=3`

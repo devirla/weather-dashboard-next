@@ -1,3 +1,8 @@
+/*
+A single city component containing basic information about today's weather
+(city name, current temperature, max temperature, min temperature )
+*/
+
 import Image from "next/image";
 
 type PropsType = {

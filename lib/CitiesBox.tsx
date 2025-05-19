@@ -1,3 +1,9 @@
+/*
+List component containing cities in a defined array. 
+If a logged in user searches for a city that is on the list, 
+it is replaced by another city.
+*/
+
 import CityItem from "./CityItem";
 import getCityWeather from "./getCityWeather";
 
@@ -14,26 +20,13 @@ const CitiesBox = async ({ city }: { city: string }) => {
     changeCities(cities);
   }
 
-  /* async function getWeather(city: string) {
-    const res = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=a530cc803efe4ab2a1b204603252503&q=${city}&days=1`
-    );
-    const data = await res.json();
-    return {
-      city: city,
-      temp: data.current.temp_c,
-      minTemp: data.forecast.forecastday[0].day.mintemp_c,
-      maxTemp: data.forecast.forecastday[0].day.maxtemp_c,
-      icon: data.current.condition.icon,
-    };
-  } */
-
   const weatherData = await Promise.all(cities.map(getCityWeather));
 
   return (
     <div className="=w-full xl:w-[30vw]">
       <h2 className="text-xl text-white pb-[18px]">Other Cities</h2>
       <div className="grid sm: grid-cols-1 md:grid-cols-2 gap-4">
+        {/*list of city item */}
         {weatherData.map((item) => (
           <CityItem
             key={item.city}

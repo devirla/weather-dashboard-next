@@ -1,3 +1,8 @@
+/* 
+Single component of 12 hours forecast weather list. It contains
+hour, forecast temperature and condition icon. 
+*/
+
 import { CarouselItem } from "@/components/ui/carousel";
 import Image from "next/image";
 

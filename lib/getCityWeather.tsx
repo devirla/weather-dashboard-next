@@ -1,3 +1,7 @@
+/*
+A function that returns the forecasted weather data for a specific city.
+*/
+
 const getCityWeather = async (city: string) => {
   const res = await fetch(
     `http://api.weatherapi.com/v1/forecast.json?key=a530cc803efe4ab2a1b204603252503&q=${city}&days=1`
