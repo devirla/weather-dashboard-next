@@ -22,8 +22,8 @@
 
 ## Screens
 
-![Weather app default screen](/images/weatherapp_screen_default.png)
-![Weather app screen after log in](/images/weatherapp_screen_login.png)
+![Weather app default screen](public/images/weatherapp_screen_default.png)
+![Weather app screen after log in](public/images/weatherapp_screen_login.png)
 
 ## Features
 
@@ -50,34 +50,38 @@
 
 To clone and run this application, you'll need Git and Node.js (which comes with npm) installed on your computer. From your command line:
 
-````
-
 1. **Clone the repository**
 
 ```bash
 git clone https://github.com/your-username/weather-dashboard-next.git
-cd weather-dashboard-next
+cd weather-dashboard-
+```
 
 2.**Install dependecies**
 
+```
 npm install
 # or
 yarn install
+```
 
 3. Configure environment variables
 
 Create a .env.local file in the root directory:
 
+```
 NEXT_PUBLIC_WEATHER_API_KEY=your_openweathermap_api_key
+```
 
 4. Run the app locally
 
+```
 npm run dev
 # or
 yarn dev
+```
 
 Open http://localhost:3000 in your browser.
-````
 
 ## Sources
 
