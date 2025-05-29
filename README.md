@@ -3,12 +3,12 @@
 ## Table of Contents
 
 <ul>
-  <li>*[General info](#general-info)</li>
-  <li>*[Screens](#screens)</li>
-  <li>*[Features](#features)</li>
-  <li>*[Technologies](#technologies)</li>
-  <li>*[Setup](#setup)</li>
-  <li>*[Sources](#sources)</li>
+  <li>[General info](#general-info)</li>
+  <li>[Screens](#screens)</li>
+  <li>[Features](#features)</li>
+  <li>[Technologies](#technologies)</li>
+  <li>[Setup](#setup)</li>
+  <li>[Sources](#sources)</li>
 </ul>
 
 ## General info
