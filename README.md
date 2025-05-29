@@ -15,7 +15,7 @@
     Modern weather dashboard built in Next.js with a real-time weather forecast data from openweather API. User can look up for a current weather with a highlights in default city. He/she can also find forecast weather for szczegoloea 12 hours and tommorow weather. You can also find information about time of sunset, sunrise and length of the day. Application has also log in module by OAuth Github. After log in he/she can search for a specific city in searchbar.
 </p>
 <p>
-    **Live Demo**: [https://weather-dashboard-next.vercel.app](https://weather-dashboard-next.vercel.app)
+    **Live Demo**: https://weather-dashboard-next.vercel.app
 </p>
 
 ## Screens
